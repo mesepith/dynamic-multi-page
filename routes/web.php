@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GarageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [GarageController::class, 'home'])->name('home');
+Route::get('/pincode/{pincode}', [GarageController::class, 'pincode'])->name('pincode');
