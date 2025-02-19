@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [GarageController::class, 'home'])->name('home');
-Route::get('/pincode/{pincode}', [GarageController::class, 'pincode'])->name('pincode');
+Route::get('/', [GarageController::class, 'show'])->name('home');
+Route::get('/pincode/{pincode}', [GarageController::class, 'show'])->name('pincode');
